@@ -47,7 +47,7 @@ export default function Dashboard() {
                                     {entries.map(entry => (
                                         <tr key={entry.id} className="">
                                             <td className="px-6 py-4 whitespace-nowrap">{entry.name}</td>
-                                            <td className="px-6 py-4 whitespace-nowrap">${entry.price}</td>
+                                            <td className="px-6 py-4 whitespace-nowrap">{entry.price}</td>
                                             <td className="px-6 py-4 whitespace-nowrap">{entry.date}</td>
                                             <td className="px-6 py-4 whitespace-nowrap">{entry.categories}</td>
                                             <td className="px-6 py-4 whitespace-nowrap">{entry.note}</td>
