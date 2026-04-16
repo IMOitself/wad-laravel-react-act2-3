@@ -1,5 +1,6 @@
 import { Head, Link, usePage } from '@inertiajs/react';
 import { dashboard, login, register } from '@/routes';
+import AppLogoIcon from '@/components/app-logo-icon';
 
 export default function Welcome({
     canRegister = true,
@@ -17,7 +18,13 @@ export default function Welcome({
                     rel="stylesheet"
                 />
             </Head>
-            <div className="flex min-h-screen items-center bg-[#FDFDFC] p-6 text-[#1b1b18] justify-center align-center lg:p-8 dark:bg-[#0a0a0a]">
+            <div className="flex flex-col gap-8 min-h-screen items-center bg-[#FDFDFC] p-6 text-[#1b1b18] justify-center align-center lg:p-8 dark:bg-[#0a0a0a]">
+                <div className="flex aspect-square size-16 items-center justify-center rounded-md bg-sidebar-primary text-sidebar-primary-foreground">
+                    <AppLogoIcon className="size-8 fill-current text-white dark:text-black" />
+                </div>
+                <span className="mb-0.5 truncate leading-tight font-semibold text-white">
+                    Budget Tracker
+                </span>
                 <header className="">
                     <nav className="flex items-center justify-end gap-4">
                         {auth.user ? (
