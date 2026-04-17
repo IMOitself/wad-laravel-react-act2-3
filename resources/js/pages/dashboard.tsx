@@ -26,7 +26,7 @@ export default function Dashboard({ entries = [] }: { entries?: any[] }) {
 
     const handleUpdate = (e: React.FormEvent) => {
         e.preventDefault();
-        if (selectedEntry) {
+        if (selectedEntry && selectedEntry.id) {
             put(`/dashboard/entries/${selectedEntry.id}`, {
             onSuccess: () => {
                 reset();
@@ -95,8 +95,8 @@ export default function Dashboard({ entries = [] }: { entries?: any[] }) {
                                     </tr>
                                 </thead>
                                 <tbody className="bg-gray-800 divide-y divide-gray-700">
-                                    {entries.filter(e => e != null).map(entry => (
-                                        <tr key={entry.id} className="">
+                                    {entries.filter(e => e != null).map((entry, idx) => (
+                                        <tr key={entry?.id || idx} className="">
                                             <td className="px-6 py-4 whitespace-nowrap">{entry.name}</td>
                                             <td className="px-6 py-4 whitespace-nowrap">{entry.price}</td>
                                             <td className="px-6 py-4 whitespace-nowrap">{entry.date || (entry.created_at ? new Date(entry.created_at).toLocaleDateString() : '')}</td>
@@ -105,7 +105,7 @@ export default function Dashboard({ entries = [] }: { entries?: any[] }) {
                                             <td className="px-6 py-4 whitespace-nowrap text-sm font-medium">
                                                 <button onClick={() => openShow(entry)} className="text-teal-400 hover:text-teal-300 mr-4">View</button>
                                                 <button onClick={() => openEdit(entry)} className="text-yellow-400 hover:text-yellow-300 mr-4">Edit</button>
-                                                <button onClick={() => handleDelete(entry.id)} className="text-red-400 hover:text-red-300">Delete</button>
+                                                <button onClick={() => entry?.id && handleDelete(entry.id)} className="text-red-400 hover:text-red-300">Delete</button>
                                             </td>
                                         </tr>
                                     ))}
@@ -234,7 +234,7 @@ export default function Dashboard({ entries = [] }: { entries?: any[] }) {
                                 <button onClick={() => setCurrentView('index')} className="bg-gray-600 hover:bg-gray-500 text-white font-semibold py-2 px-6 rounded shadow transition-colors">Back to List</button>
                                 <div className="space-x-3">
                                     <button onClick={() => openEdit(selectedEntry)} className="bg-yellow-500 hover:bg-yellow-600 text-white font-semibold py-2 px-6 rounded shadow transition-colors">Edit</button>
-                                    <button onClick={() => selectedEntry && handleDelete(selectedEntry.id)} className="bg-red-500 hover:bg-red-600 text-white font-semibold py-2 px-6 rounded shadow transition-colors">Delete</button>
+                                    <button onClick={() => selectedEntry?.id && handleDelete(selectedEntry.id)} className="bg-red-500 hover:bg-red-600 text-white font-semibold py-2 px-6 rounded shadow transition-colors">Delete</button>
                                 </div>
                             </div>
                         </div>
