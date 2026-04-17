@@ -2,5 +2,5 @@
 
 work in progress :D
 
-<img width="1080" height="1080" alt="670897909_10233512714346345_8013956442123360867_n" src="https://github.com/user-attachments/assets/47e42924-d373-4228-a833-f8dd38893f59" />
+<img width="747" height="402" alt="wadlaravelreact drawio" src="https://github.com/user-attachments/assets/12b185ab-e11b-4159-a9c7-ad0eeb66ef04" />
 
