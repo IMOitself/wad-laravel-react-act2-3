@@ -222,7 +222,7 @@ export default function Dashboard({ entries = [] }: { entries?: any[] }) {
                                 <table className="min-w-full">
                                     <tbody className="divide-y divide-gray-700">
                                         <tr><th className="px-6 py-4 bg-gray-700 text-left font-semibold text-gray-300 w-1/3">Name</th><td className="px-6 py-4 text-gray-200">{selectedEntry.name}</td></tr>
-                                        <tr><th className="px-6 py-4 bg-gray-700 text-left font-semibold text-gray-300">Price</th><td className="px-6 py-4 text-gray-200">₱{selectedEntry.price}</td></tr>
+                                        <tr><th className="px-6 py-4 bg-gray-700 text-left font-semibold text-gray-300">Price</th><td className="px-6 py-4 text-gray-200">{selectedEntry.price}</td></tr>
                                         <tr><th className="px-6 py-4 bg-gray-700 text-left font-semibold text-gray-300">Date</th><td className="px-6 py-4 text-gray-200">{selectedEntry.date}</td></tr>
                                         <tr><th className="px-6 py-4 bg-gray-700 text-left font-semibold text-gray-300">Category</th><td className="px-6 py-4 text-gray-200">{selectedEntry.categories}</td></tr>
                                         <tr><th className="px-6 py-4 bg-gray-700 text-left font-semibold text-gray-300">Note</th><td className="px-6 py-4 text-gray-200">{selectedEntry.note}</td></tr>
