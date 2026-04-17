@@ -72,7 +72,7 @@ export default function Dashboard({ entries = [] }: { entries?: any[] }) {
             {currentView === 'index' && (
                 <div>
                     <div className="flex justify-between items-center mb-6">
-                        <h1 className="text-3xl font-bold text-white">Entries List</h1>
+                        <h1 className="text-3xl font-bold text-white">Budget Tracker</h1>
                         <button
                             onClick={openCreate}
                             className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded shadow"
@@ -88,8 +88,8 @@ export default function Dashboard({ entries = [] }: { entries?: any[] }) {
                                     <tr>
                                         <th className="px-6 py-3 text-left text-xs font-semibold text-gray-300 uppercase tracking-wider">Name</th>
                                         <th className="px-6 py-3 text-left text-xs font-semibold text-gray-300 uppercase tracking-wider">Price</th>
-                                        <th className="px-6 py-3 text-left text-xs font-semibold text-gray-300 uppercase tracking-wider">Date</th>
                                         <th className="px-6 py-3 text-left text-xs font-semibold text-gray-300 uppercase tracking-wider">Category</th>
+                                        <th className="px-6 py-3 text-left text-xs font-semibold text-gray-300 uppercase tracking-wider">Date</th>
                                         <th className="px-6 py-3 text-left text-xs font-semibold text-gray-300 uppercase tracking-wider">Note</th>
                                         <th className="px-6 py-3 text-left text-xs font-semibold text-gray-300 uppercase tracking-wider">Actions</th>
                                     </tr>
@@ -99,8 +99,8 @@ export default function Dashboard({ entries = [] }: { entries?: any[] }) {
                                         <tr key={entry?.id || idx} className="">
                                             <td className="px-6 py-4 whitespace-nowrap">{entry.name}</td>
                                             <td className="px-6 py-4 whitespace-nowrap">{entry.price}</td>
-                                            <td className="px-6 py-4 whitespace-nowrap">{entry.date || (entry.created_at ? new Date(entry.created_at).toLocaleDateString() : '')}</td>
                                             <td className="px-6 py-4 whitespace-nowrap">{entry.categories}</td>
+                                            <td className="px-6 py-4 whitespace-nowrap">{entry.date || (entry.created_at ? new Date(entry.created_at).toLocaleDateString() : '')}</td>
                                             <td className="px-6 py-4 whitespace-nowrap">{entry.note}</td>
                                             <td className="px-6 py-4 whitespace-nowrap text-sm font-medium">
                                                 <button onClick={() => openShow(entry)} className="text-teal-400 hover:text-teal-300 mr-4">View</button>
