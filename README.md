@@ -3,6 +3,10 @@
 > [!IMPORTANT]
 > README.md work in progress :D
 
+- [midterm (wad-laravel-act1 to 4)](https://github.com/IMOitself/wad-laravel-act1)
+- [anime-watched-ms](https://github.com/IMOitself/anime-watched-ms)
+- wad-laravel-react-act2-3 
+
 
 # <br>video demo [here](https://drive.google.com/file/d/1aSCZ4Qe8FM9LlBwzVAuxkXL_L4lhBPtR/view?usp=sharing)<br><br>
 
