@@ -31,4 +31,11 @@ class User extends Authenticatable
             'two_factor_confirmed_at' => 'datetime',
         ];
     }
+
+    public function entries() {
+        return $this->hasMany(Entry::class); // one to many:D
+    }
+    public function categories() {
+        return $this->hasMany(Category::class); // one to many:D
+    }
 }
