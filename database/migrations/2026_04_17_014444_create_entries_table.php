@@ -13,6 +13,10 @@ return new class extends Migration
     {
         Schema::create('entries', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('user_id')->nullable()->constrained()->onDelete('cascade');
+            $table->foreignId('note_id')->nullable()->constrained()->onDelete('set null');
+            $table->string('name')->nullable();
+            $table->decimal('price', 8, 2)->nullable();
             $table->timestamps();
         });
     }
