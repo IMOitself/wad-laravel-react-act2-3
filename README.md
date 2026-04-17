@@ -1,4 +1,4 @@
-# wad-laravel-react-act2
+# wad-laravel-react-act2-3
 
 > [!IMPORTANT]
 > README.md work in progress :D
